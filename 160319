@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _2602
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //secondTotal
+
+            int secondTotal;
+            int a;
+            int b;
+            int c;
+            int d;
+
+
+            int rest;
+            Console.WriteLine("Please Enter the number of seconds");
+            secondTotal = Convert.ToInt32(Console.ReadLine());
+
+            if (secondTotal > 0) ;
+            {
+                a = (secondTotal / (60 * 60 * 24)); //5 days
+                rest = secondTotal - (60 * 60 * 24 * a);
+                b = rest / (60 * 60); //4 hours
+                rest = rest - (60 * 60 * b);
+                c = rest / 60; //32 minutes
+                d = rest - (60 * c); //51 seconds
+
+                Console.WriteLine(a, b, c, d);
+            }
+
+            else
+            {
+                Console.WriteLine("Enter Valid Number");
+            }
+
+        }
+    }
+}

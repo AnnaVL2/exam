@@ -10,35 +10,23 @@ namespace _2602
     {
         static void Main(string[] args)
         {
-            //secondTotal
+            
+            Console.WriteLine("Please enter number in seconds");
 
-            int secondTotal;
-            int a;
-            int b;
-            int c;
-            int d;
+            int secondsTotal = Convert.ToInt32(Console.ReadLine());
 
+            int a = secondsTotal / (60*60*24); // days
+            secondsTotal = secondsTotal % (60 * 60 * 24);
 
-            int rest;
-            Console.WriteLine("Please Enter the number of seconds");
-            secondTotal = Convert.ToInt32(Console.ReadLine());
+            int b = secondsTotal / (60 * 60); // hours
+            secondsTotal = secondsTotal % (60 * 60);
 
-            if (secondTotal > 0) ;
-            {
-                a = (secondTotal / (60 * 60 * 24)); //5 days
-                rest = secondTotal - (60 * 60 * 24 * a);
-                b = rest / (60 * 60); //4 hours
-                rest = rest - (60 * 60 * b);
-                c = rest / 60; //32 minutes
-                d = rest - (60 * c); //51 seconds
+            int c = secondsTotal / 60; // minutes
+            secondsTotal= secondsTotal % 60;
 
-                Console.WriteLine(a, b, c, d);
-            }
+            int d = secondsTotal;
 
-            else
-            {
-                Console.WriteLine("Enter Valid Number");
-            }
+            Console.WriteLine($"There are {a} days, {b} hours, {c} minutes and {d} seconds");
 
         }
     }

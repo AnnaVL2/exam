@@ -12,27 +12,24 @@ namespace ConsoleApp2
         {
 
 
-           
+
             // prime
             int n;
-
+            Console.WriteLine("Please type your number");
             n = Convert.ToInt32(Console.ReadLine());
             if (n <= 1000 && n >= 0) ;
             {
-               
-                    if (n % 2 != 0) 
-                    {
-                        Console.WriteLine("This is Prime number");
-                    }
 
-                    else
-                        {
-                            Console.WriteLine("This is NOT a Prime number");
-                        }
-                    }
+                if (n % 2 != 0)
+                {
+                    Console.WriteLine("This is Prime number");
+                }
+
+                else
+                {
+                    Console.WriteLine("This is NOT a Prime number");
+                }
             }
-
         }
     }
 }
-  
